@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="popup.css">
+</head>
+
+<body>
+    <div class="header">
+        <a href="/options.html" target="_blank"><img class="insvRefresh" src="./assets/icons/banner.png" alt="Logo extensão"></a>
+    </div>
+    <hr>
+    <div id="queue-list"></div>
+    <button id="add-queue-btn" class="add-queue-btn has-tooltip" data-tooltip="Adicionar fila">
+        <img class src="./assets/icons/add.png" alt="Icone de adicionar">
+    </button>
+    <hr>
+    <div class="sound-and-range">
+        <select id="ddlSound">
+            <option value="notification.mp3">Padrão</option>
+            <option value="tech.mp3">Tech</option>
+            <option value="limba.mp3">Limba</option>
+            <option value="lis.mp3">LIS</option>
+            <option value="interface.mp3">Interface</option>
+            <option value="bubble.mp3">Bubble Pop</option>
+        </select>
+        <input class="has-tooltip" data-tooltip="Volume da notificação" type="range" id="volumeSlider" min="0" max="100"
+            value="50" />
+    </div>
+    <div class="flex-between">
+        <span id="status"></span>
+        <a href="https://forms.gle/kCXquvvB3s2fHDTx7" target="_blank">Enviar feedback</a>
+    </div>
+    <a href="https://chromewebstore.google.com/detail/grid-refresher/ohghgkmopfddmojeljidffidohcfpead/reviews?utm_source=item-share-cb" target="_blank" data-tooltip="Adicionar fila" class="glowPulse has-tooltip">✨</a>
+    <script src="popup.js"></script>
+</body>
+
+</html>

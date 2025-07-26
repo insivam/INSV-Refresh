@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INSV Refresh - Configs</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="options.css">
+</head>
+
+<body>
+    <div class="layout">
+        <aside class="sidebar">
+            <div class="logo">INSV Refresh</div>
+            <nav class="menu">
+                <a href="#intro">Introdução</a>
+                <a href="#funcionalidades">Funcionalidades</a>
+                <a href="#upload-audio" class="locked-content">Upload de Áudio</a>
+                <a href="#modo-legacy" class="locked-content">Modo Legacy</a>
+            </nav>
+            <a href="https://chromewebstore.google.com/detail/grid-refresher/ohghgkmopfddmojeljidffidohcfpead/reviews?utm_source=item-share-cb"
+                class="review" target="_blank">Avalie nossa extensão! <span class="glowPulse">✨</span></a>
+        </aside>
+
+        <main class="content">
+            <section id="intro">
+                <h1>Bem-vindo!</h1>
+                <p>Aqui você encontra um tutorial de como utilizar a extensão e configurar os recursos disponíveis.</p>
+                <div class="demo">
+                    <video src="assets/video/mockup_test.mp4" controls width="100%"
+                        poster="/assets/video/mockup_test_thumb.png">
+                        Seu navegador não suporta a visualização de vídeos.
+                    </video>
+                    <p class="caption">Exemplo visual do funcionamento da extensão.</p>
+                </div>
+            </section>
+
+            <section id="funcionalidades">
+                <h2>Funcionalidades</h2>
+                <ul>
+                    <li>Atualiza a fila automaticamente em intervalos configuráveis.</li>
+                    <li>Emite som ao detectar novos chamados.</li>
+                    <li>Pausa o refresh se houver caixa marcada (chamado selecionado).</li>
+                </ul>
+            </section>
+
+            <div style="filter: grayscale(1);opacity: 50%;">
+                <p style="position: absolute;top: 15%;font-size: 75px;font-weight: bolder;left: 50%;transform: translateX(-50%);">EM BREVE</p>
+                <section id="upload-audio">
+                    <h2>Upload de Som Personalizado</h2>
+                    <p>Selecione um arquivo de áudio para usar como som de notificação:</p>
+                    <input type="file" accept="audio/*" id="custom-audio" disabled onchange="validateAudioFile(this)">
+                    <div><button>Salvar Áudio</button></div>
+                </section>
+
+                <section id="modo-legacy">
+                    <h2>Modo Legacy</h2>
+                    <p>Ative o modo simples da extensão (sem notificações ou validações). Neste modo, a extensão apenas
+                        atualiza a fila a cada intervalo definido, desativando todas as outras funcionalidades.</p>
+                    <label>
+                        <input type="checkbox" id="toggle-legacy" disabled> Ativar Modo Legacy
+                    </label>
+                </section>
+            </div>
+
+        </main>
+    </div>
+    <script src="options.js"></script>
+</body>
+
+</html>
